@@ -1787,6 +1787,11 @@ section {
     display: none;
   }
 
+  /* With links and CTA hidden, center the logo in the navbar on phones */
+  .nav {
+    justify-content: center;
+  }
+
   /* Hero: single column, photo behind centered text */
   .hero {
     min-height: 0;
