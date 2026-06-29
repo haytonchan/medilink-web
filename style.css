@@ -1782,6 +1782,11 @@ section {
     display: none;
   }
 
+  /* Hide the App Store badge in the navbar on mobile — the hero already has a CTA */
+  .nav-cta {
+    display: none;
+  }
+
   /* Hero: single column, photo behind centered text */
   .hero {
     min-height: 0;
@@ -1813,11 +1818,25 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: none;
+    width: 100%;
   }
 
+  /* Cap the headline so it stops wrapping excessively on small screens */
+  .hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  /* Subtext: centered, full width, with comfortable horizontal padding */
   .hero .subhead {
+    text-align: center;
+    max-width: none;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .hero-cta {
@@ -1841,6 +1860,29 @@ section {
 
   .phone-frame--showcase {
     width: 220px;
+  }
+
+  /* Testimonials: stack into a single column, full-width cards with side margin.
+     Placed after the desktop .tm-grid (3-col) rule so it wins on mobile. */
+  .tm-grid {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .tm-card {
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  /* Footer nav: allow links to wrap between items, but never mid-word */
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    white-space: nowrap;
   }
 }
 
