@@ -336,7 +336,7 @@ section {
 
 .hero-cta .note {
   font-size: 0.875rem;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
 }
 
 /* ===== Reusable phone frame ===== */
@@ -2037,4 +2037,44 @@ section {
   color: #5A5A66;
   line-height: 1.7;
   padding-bottom: 20px;
+}
+
+/* ===== Desktop text scale-up (text only, non-mobile ≥769px) =====
+   Enlarges headings and body copy by ~15% on larger screens.
+   Layout, images, and mobile (≤768px) are untouched. */
+@media (min-width: 769px) {
+  /* Hero */
+  .hero h1 {
+    font-size: clamp(46px, 6.6vw, 78px);
+  }
+  .hero .subhead {
+    font-size: 21px;
+  }
+
+  /* Section headings */
+  .why-title,
+  .how-title {
+    font-size: 46px;
+  }
+  .tm-title {
+    font-size: 42px;
+  }
+
+  /* Section sub-paragraphs / lead copy */
+  .section-head p {
+    font-size: 1.3rem;
+  }
+
+  /* Body copy */
+  body {
+    font-size: 1.05rem;
+  }
+  .tm-quote {
+    font-size: 17px;
+  }
+
+  /* Free-tool / feature card titles */
+  .fg-card-title {
+    font-size: 18px;
+  }
 }
